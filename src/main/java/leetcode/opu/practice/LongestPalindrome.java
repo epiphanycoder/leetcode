@@ -1,5 +1,6 @@
 package leetcode.opu.practice;
 
+// Explanation: https://www.youtube.com/watch?v=XYQecbcd6_c&t=13s
 //5. Longest Palindromic Substring
 public class LongestPalindrome {
     public String longestPalindrome(String s) {
