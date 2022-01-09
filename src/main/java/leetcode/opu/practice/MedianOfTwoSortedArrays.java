@@ -17,15 +17,15 @@ public class MedianOfTwoSortedArrays {
             ;
             int partY = (combinedLength + 1) / 2 - partX;
 
-            int leftX = getMax(partX, nums1);
-            int rightX = getMin(partX, nums1);
+            int leftX = partX == 0 ? Integer.MIN_VALUE : nums1[partX - 1]; //getMax(partX, nums1);
+            int rightX = (partX == nums1.length) ? Integer.MAX_VALUE : nums1[partX]; // getMin(partX, nums1);
 
-            int leftY = getMax(partY, nums2);
-            int rightY = getMin(partY, nums2);
+            int leftY = partY == 0 ? Integer.MIN_VALUE : nums2[partY - 1]; // getMax(partY, nums2);
+            int rightY = (partY == nums2.length) ? Integer.MAX_VALUE : nums2[partY]; // getMin(partY, nums2);
 
             if (leftX <= rightY && leftY <= rightX) {
                 if (combinedLength % 2 == 0) {
-                    return (Math.max(leftX, rightX) + Math.min(leftY, rightY)) / 2.0;
+                    return (Math.max(leftX, leftY) + Math.min(rightX, rightY)) / 2.0;
                 } else {
                     return Math.max(leftX, leftY);
                 }
