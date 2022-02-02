@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class NArrayPostOrder {
-
+public class NArrayPreOrder {
+    // 589. N-ary Tree Preorder Traversal
     // Definition for a Node.
     class Node {
         public int val;
