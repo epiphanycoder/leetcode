@@ -1,5 +1,7 @@
 package leetcode.opu.practice;
 
+import java.util.stream.IntStream;
+
 // Explanation: https://www.youtube.com/watch?v=XYQecbcd6_c&t=13s
 //5. Longest Palindromic Substring
 public class LongestPalindrome {
@@ -8,7 +10,6 @@ public class LongestPalindrome {
         String resContent = "";
 
         for (int i = 0; i < s.length(); i++) {
-
             //Odd length
             int left = i;
             int right = i;
